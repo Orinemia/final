@@ -1,0 +1,53 @@
+<%= form_for(@cic) do |f| %>
+  <% if @cic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cic.errors.count, "error") %> prohibited this cic from being saved:</h2>
+
+      <ul>
+      <% @cic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :presidency %><br>
+    <%= f.text_field :presidency %>
+  </div>
+  <div class="field">
+    <%= f.label :president %><br>
+    <%= f.text_field :president %>
+  </div>
+  <div class="field">
+    <%= f.label :took_office %><br>
+    <%= f.text_field :took_office %>
+  </div>
+  <div class="field">
+    <%= f.label :left_office %><br>
+    <%= f.text_field :left_office %>
+  </div>
+  <div class="field">
+    <%= f.label :party %><br>
+    <%= f.text_field :party %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :term %><br>
+    <%= f.text_field :term %>
+  </div>
+  <div class="field">
+    <%= f.label :biography %><br>
+    <%= f.text_area :biography %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

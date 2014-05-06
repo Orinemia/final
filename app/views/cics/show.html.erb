@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Presidency:</strong>
+  <%= @cic.presidency %>
+</p>
+
+<p>
+  <strong>President:</strong>
+  <%= @cic.president %>
+</p>
+
+<p>
+  <strong>Took office:</strong>
+  <%= @cic.took_office %>
+</p>
+
+<p>
+  <strong>Left office:</strong>
+  <%= @cic.left_office %>
+</p>
+
+<p>
+  <strong>Party:</strong>
+  <%= @cic.party %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @cic.image %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @cic.state %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @cic.term %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @cic.biography %>
+</p>
+
+<%= link_to 'Edit', edit_cic_path(@cic) %> |
+<%= link_to 'Back', cics_path %>
