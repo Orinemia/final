@@ -1,4 +1,8 @@
 President::Application.routes.draw do
+  get "navigation/home"
+  get "navigation/about"
+  get "navigation/contact"
+  get "navigation/intro"
   resources :users
 
   resources :cics
