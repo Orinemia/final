@@ -2,7 +2,7 @@ President::Application.routes.draw do
   get "navigation/home"
   get "navigation/about"
   get "navigation/contact"
-  get "navigation/intro"
+  # get "navigation/intro"
   resources :users
 
   resources :cics
@@ -12,7 +12,7 @@ President::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'navigation/intro'
+  root "navigation/intro"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
