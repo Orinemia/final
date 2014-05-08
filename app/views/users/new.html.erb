@@ -1,5 +1,32 @@
-<h1>New user</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', users_path %>
+<% provide(:title, 'Sign up') %>
+<div class="grid_6 registerpage">
+	<div class="whiteback">
+		<h1>Sign up</h1>
+	</div>
+	<div class="therest">
+		<br/>
+		<%= form_for(@user) do |f| %>
+		 <%= render 'shared/error_messages' %>
+          <br />
+		  <%= f.label :firstname, "First Name:", style: "width:150px;" %>
+		  <%= f.text_field :firstname %>
+		  <br/>
+		  <%= f.label :lastname, "Last Name:", style: "width:150px;" %>
+		  <%= f.text_field :lastname %>
+		  <br/>
+		  <%= f.label :username, "User Name:", style: "width:150px;" %>
+		  <%= f.text_field :username %>
+		  <br/>
+		  <%= f.label :email, "Email:", style: "width:150px;" %>
+		  <%= f.text_field :email %>
+		  <br/>
+		  <%= f.label :password, "Password:", style: "width:150px;" %>
+		  <%= f.password_field :password %>
+		  <br />
+		  <%= f.label :password_confirmation, "Type password again to confirm:", style: "width:150px;" %>
+		  <%= f.password_field :password_confirmation %>
+		  
+		  <%= f.submit "Create my account", class: "button-style" %><br/>
+		<% end %>
+	</div>
+</div>

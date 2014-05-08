@@ -1,0 +1,22 @@
+
+<div class="grid_6 loginpage">
+<% provide(:title, 'Sign in') %>
+<div class="whiteback">
+<h1>Sign in</h1>
+</div>
+<div class="therest">
+		<p style="color: red;"><%= @error %></p>
+		<%= form_for(:session, url: sessions_path) do |f| %>
+
+			<%= f.label :email, "Email:", style: "width:100px;" %>
+			<%= f.text_field :email %>
+			<br/>
+			<%= f.label :password, "Password:", style: "width:100px;" %>
+			<%= f.password_field :password %>
+			<br/><br/>
+			<%= f.submit "Sign in", class: "button-style" %>
+		<% end %>
+		<br/>
+		<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+</div>
+</div>
