@@ -1,15 +1,15 @@
 body {
-  background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: #494949;
 }
 
 pre {
@@ -24,8 +24,8 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: gray;
+    /*background-color: #000;*/
   }
 }
 
@@ -40,13 +40,11 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
+  color: red;
 }
 
 #error_explanation {
-  width: 450px;
+  width: 350px;
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 0;

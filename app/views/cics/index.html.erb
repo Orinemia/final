@@ -1,43 +1,26 @@
-<h1>Listing cics</h1>
+<h1>List of Presidents</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Presidency</th>
-      <th>President</th>
-      <th>Took office</th>
-      <th>Left office</th>
-      <th>Party</th>
-      <th>Image</th>
-      <th>State</th>
-      <th>Term</th>
-      <th>Biography</th>
-      <th></th>
-      <th></th>
-      <th></th>
+  <% @cics.each do |cic| %>     
+    <tr class = "<%= cycle('list_line_odd', 'list_line_even' ) %>">
+       <td>
+         <%= image_tag(cic.image, class:'president_image') %>
+       </td>
+       <td class = "president_description">
+        <dl>
+           <dt><%= cic.presidency %>
+           <dd><%= truncate(strip_tags(cic.biography), length: 80) %></dd>
+        <dl>
+       </td>
+
+        <td class = "list_actions">
+           <%= link_to 'Show', cic %><br />
+           <%= link_to 'Edit', edit_cic_path(cic) %><br />
+           <%= link_to 'Destroy', cic, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @cics.each do |cic| %>
-      <tr>
-        <td><%= cic.presidency %></td>
-        <td><%= cic.president %></td>
-        <td><%= cic.took_office %></td>
-        <td><%= cic.left_office %></td>
-        <td><%= cic.party %></td>
-        <td><%= cic.image %></td>
-        <td><%= cic.state %></td>
-        <td><%= cic.term %></td>
-        <td><%= cic.biography %></td>
-        <td><%= link_to 'Show', cic %></td>
-        <td><%= link_to 'Edit', edit_cic_path(cic) %></td>
-        <td><%= link_to 'Destroy', cic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
-  </tbody>
 </table>
-
-<br>
+<br />
 
 <%= link_to 'New Cic', new_cic_path %>

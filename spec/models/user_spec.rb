@@ -66,8 +66,8 @@ describe User do
 		it "should be invalid" do
 			addresses = %w[user@test,com user_at_test.com name.user@testcom. test@say_wrong.com user@test+say.com]
 			addresses.each do |invalid_address|
-				@user.email = invalid_address
-				expect (@user).should_not be_valid
+			   @user.email = invalid_address
+			   expect (@user).should_not be_valid
 			end
 		end
 	end
@@ -115,5 +115,10 @@ describe User do
         end
 
          it { should be_admin }
+
+
+         it { should respond_to(:password_confirmation) }
+         it { should respond_to(:remember_token) }
+         it { should respond_to(:authenticate) }
      end
 end

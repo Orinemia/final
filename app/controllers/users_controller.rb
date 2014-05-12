@@ -28,7 +28,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)     
     if @user.save
-       flash[:success] = "No meet the Visionaries!" # should show on the page when user has successfully created an account.
+      sign_in @user
+       flash[:success] = "Now meet the Visionaries!" # should show on the page when user has successfully created an account.
        redirect_to @user
     else
        render 'new'

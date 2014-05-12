@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base     # To be able to compare email addresses and check user info provided by users. Orinemia Ajulo
 	before_save { self.email = email.downcase }
-	#before_create :create_remember_token
+	before_create :create_remember_token
 	#length, presence and format validation for user details
 	validates :firstname, :lastname, :username, presence: true, length: { maximum: 15 }
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -15,13 +15,13 @@ class User < ActiveRecord::Base     # To be able to compare email addresses and 
     	SecureRandom.urlsafe_base64
     end
 
-    def User.hash(token)
+    def User.digest(token)
     	Digest::SHA1.hexdigest(token.to_s)
     end
 
-    #private
+    private
 
-        #def create_remember_token
-        	#self.remember_token = User.hash(User.new_remember_token)
-        #end
+        def create_remember_token
+        	self.remember_token = User.digest(User.new_remember_token)
+        end
 end

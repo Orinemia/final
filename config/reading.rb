@@ -3,7 +3,7 @@ require File.expand_path('../environment', __FILE__)
 
 require 'csv'
 
-file = File.open("config/president1.csv")   #(r:iso8859-1)
+file = File.open("president1.csv")   #(r:iso8859-1)
 
    
    CSV.foreach(file) do |row| 

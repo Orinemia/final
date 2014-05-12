@@ -1,24 +1,22 @@
 <% provide(:title, "Edit user") %>
+<div>
 
-
-<div class="grid_6 registerpage">
-
-  <div class="whiteback">
+  <div>
   <h1>Update your profile</h1>
   </div>
-  <div class="therest">
+  <div>
     <br/>
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :firstname, "First Name:" %>
-      <%= f.text_field :name %>
+      <%= f.text_field :firstname %>
       <br/>
       <%= f.label :lastname, "Last name:" %>
-      <%= f.text_field :name %>
+      <%= f.text_field :lastname %>
       <br/>
       <%= f.label :username, "Username:" %>
-      <%= f.text_field :name %>
+      <%= f.text_field :username %>
       <br/>
       <%= f.label :email, "Email:" %>
       <%= f.text_field :email %>

@@ -2,76 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body  {
-	background-image:      image-url('FrontPage.png');
-	background-attachment: fixed;
-	background-position:   center;
-	background-size:       40%;
-}
-h1 {
-   border-color:     #140773;
-   border-width:       .25em;
-   border-style:       groove;
-   padding:            .25em;
-   width:                35%;
-   margin-left:         auto;
-   margin-right:        auto;
-   border-right:  .25em groove #140773;
-   line-height:         30px;
-
-}
-
-#nice  {
-	text-align:  center;
-	font-size:     350%;
-	font-weight:   bold;
-	color:      #160773;
-	background-color: #DBDBDB;
-}
-
-%vertical-align {
-	position: relative;
-	top:            490%;
-	-webkit-transform: translateY(+490%);
-	-ms-transform: translateY(+490%);
-	transform: translateY(+490%);
-}
 
 
 
-p  { 
-   border: solid 2px #140773;
-   background-color: #FF0000;
-   color:            #160773;
-   width:                50%;
-   margin-left:         auto;
-   margin-right:        auto;
-   padding:            .45em;
-   @extend   %vertical-align;
-   border-right:  .25em solid #140773;
-   
 
-    }
 
-#nicer  {
-	font-size:           300%;
-	text-align:        center;
-}
 
-%vertical-align1 {
-   position: relative;
-   top:            550%;
-   -webkit-transform: translateY(+550%);
-   -ms-transform: translateY(+550%);
-   transform: translateY(+550%);
-}
 
-button  {
-   background-color: #FF0000;
-   color:            #140773;
-   padding:            .45em;
-   width:                10%;
-   font-size:           150%;
-   margin-left:          45%;
-   @extend   %vertical-align1;
-}

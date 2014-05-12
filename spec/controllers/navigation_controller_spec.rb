@@ -13,7 +13,7 @@ describe NavigationController do
     it "should have the right title" do
       get 'home'
       response.should have_selector("title",
-                        :content => "The Presidents: From then...till now | Home")
+                        :content => "The Presidents | Home")
     end
   end
 
@@ -26,7 +26,7 @@ describe NavigationController do
     it "should have the right title" do
       get 'about'
       response.should have_selector("title",
-                        :content => "The Presidents: From then...till now | About")
+                        :content => "The Presidents | About")
     end
   end
 
@@ -39,7 +39,7 @@ describe NavigationController do
     it "should have the right title" do
       get 'contact'
       response.should have_selector("title",
-                        :content => "The Presidents: From then...till now | Contact")
+                        :content => "The Presidents | Contact")
     end
   end
 

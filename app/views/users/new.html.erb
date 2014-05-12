@@ -1,9 +1,11 @@
 <% provide(:title, 'Sign up') %>
-<div class="grid_6 registerpage">
-	<div class="whiteback">
+<div>
+	<div>
 		<h1>Sign up</h1>
 	</div>
-	<div class="therest">
+	<br />
+	<br />
+	<div>
 		<br/>
 		<%= form_for(@user) do |f| %>
 		 <%= render 'shared/error_messages' %>
@@ -25,7 +27,7 @@
 		  <br />
 		  <%= f.label :password_confirmation, "Type password again to confirm:", style: "width:150px;" %>
 		  <%= f.password_field :password_confirmation %>
-		  
+		  <br />
 		  <%= f.submit "Create my account", class: "button-style" %><br/>
 		<% end %>
 	</div>
