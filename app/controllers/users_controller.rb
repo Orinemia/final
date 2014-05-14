@@ -30,6 +30,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in @user
        flash[:success] = "Now meet the Visionaries!" # should show on the page when user has successfully created an account.
+       ContactNotifier.message_email(@user).deliver
        redirect_to @user
     else
        render 'new'

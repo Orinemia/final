@@ -1,19 +1,23 @@
 <% provide(:title, @user.firstname) %>
 <div>
    <div>
-       <h1>
+       <div>
 	    <%= gravatar_for @user %>
-	   <h1> Welcome <%= @user.firstname.upcase %>!</h1>
-      </h1>
+      <br />
+      <br />
+	    <h1> Welcome <%= @user.firstname.capitalize %>!</h1>
+      </div>
   </div>
 
   <div>
       <% if signed_in? %>
       	<br/>
-        <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-        <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+        <ul id = "no">
+          <li><%= button_to "Settings", edit_user_path(current_user) %></li>
+          <li><%= button_to "Sign out", signout_path, method: "delete" %></li>
       <% else %>
-         <li><%= link_to "Sign in", signin_path %></li>
+         <li><%= button_to "Sign in", signin_path %></li>
+        </ul>
       <% end %>
   </div>
 </div>

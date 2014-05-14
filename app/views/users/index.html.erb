@@ -1,10 +1,12 @@
 <h1>Listing users</h1>
-
+<br />
 <table>
   <thead>
     <tr>
       <th>Firstname</th>
+      <th></th>
       <th>Lastname</th>
+      <th></th>
       <th>Username</th>
       
       <th></th>
@@ -17,7 +19,9 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.firstname %></td>
+        <td></td>
         <td><%= user.lastname %></td>
+        <td></td>
         <td><%= user.username %></td>
         
         <td><%= link_to 'Show', user %></td>

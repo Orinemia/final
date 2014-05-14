@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ *   {
+ 	margin:0;
+ 	padding:0;
+ 	
+ }
+
+#banner {
+	background: #6D87D6;
+	padding: 10px;
+	border-bottom: 2px solid;
+	font: small-caps 40px/40px Helvetica, "Times New Roman", "sans-serif";
+	color: #081073;
+	text-align: center;
+    
+    img {
+       width:  70px;
+       height: 50px;
+       float: left;
+    }
+}
+
+#notice {
+	color: #081073;
+	border: 2px solid red;
+	padding: 1em;
+	margin-bottom: 2em;
+	background-color: #f0f0f0;
+	font: bold smaller sans-serif;
+}
+
+#columns {
+	background: #081073;
+
+	#main  {
+	   margin-left: 17em;
+	   padding: 1em;
+	   background: #7279db;
+	}
+
+	#side {
+	  float: left;
+	  padding: 1em 2em;
+	  width: 13em;
+	  background: #081073;
+	  border: 1px;
+
+	  ul {
+	    padding: 2px;
+        li {
+          list-style: none;
+          a {
+            color: #6D87D6;
+            font-size: medium;
+            text-decoration: none;
+          }
+        }
+	  }
+	}
+}
+
+.sign_up  {
+	fieldset  {
+	  background: #eeffee;
+	  width: 45em;
+
+	  legend {
+	     color:      #6D87D6;
+	     background: #081073;
+	     font-family: helvetica;
+	     padding: 0.2em 1em;
+	  }
+	}
+
+   
+    label  {
+       width: 4em;
+       clear: left;
+       float: left;
+       text-align: right;
+       padding-top: 0.2em;
+       margin-top:0.2em;
+       margin-right: 0.5em;
+       display: block;
+    }
+
+    input  {
+       background-color: #CCCCFF;
+       float: left;
+    }
+    
+    .button-style  {
+      clear: both;
+      float: left;
+      width: 10em;
+      margin-top: 1em;
+      margin-left: 13em;
+      background-color: #CCCCFF;
+    }
+}
+
+.signup h1  {
+	font: helvetica bold;
+	padding: 0.5em;
+	color: #081073;
+}
+
+.adjust  {
+	font: helvetica bold small;
+    padding: 0.5em;
+    clear: both;
+    float: left;
+    color: #081073;
+
+}
+
+#error {
+	color: white;
+}
+
+#no  {
+	text-decoration: no;
+	list-style-type: none;
+}
+
+
+
+
+
+
+
+
+
+

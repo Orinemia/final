@@ -1,49 +1,64 @@
-<p id="notice"><%= notice %></p>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvxrtNIzHIO-kUxuK82OFKETpX9gBqkTg&sensor=false">
+</script>
 
-<p>
-  <strong>Presidency:</strong>
-  <%= @cic.presidency %>
-</p>
+<script type="text/javascript">
+  
+var geocoder;
+var map;
+function initialize() {
+  geocoder = new google.maps.Geocoder();
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var mapOptions = {
+    zoom: 8,
+    center: latlng
+  }
+  map = new google.maps.Map(document.getElementById("map-position"), mapOptions);
+}
 
-<p>
-  <strong>President:</strong>
-  <%= @cic.president %>
-</p>
+function codeAddress() {
+  var address = document.getElementById("step").innerHTML;
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
+  });
+}
+window.onload = function() {
+    initialize();
+    codeAddress();
+}
+</script>
 
-<p>
-  <strong>Took office:</strong>
-  <%= @cic.took_office %>
-</p>
 
-<p>
-  <strong>Left office:</strong>
-  <%= @cic.left_office %>
-</p>
+<h1 style="font-weight: 600; letter-spacing: -0.03em; text-align: center;"><%= @cic.president %></h1>
+<br />
+<div id = "overall">
+  <div id = "show">
+    <%= image_tag(@cic.image) %> 
+  </div>
+  <div id="map-position"/></div>
+  <div id = "stats">
+      <strong>Took office:</strong>
+          <%= @cic.took_office %>
+      <strong>Left office:</strong>
+          <%= @cic.left_office %>
+      <strong>Political Party:<strong>
+          <%= @cic.party %>
+      <div id = "step">
+       <strong>State of origin:</strong>
+          <%= @cic.state %>
+      </div>
+      <strong>Number of Terms:</strong>
+          <%= @cic.term %>
+   <%= link_to 'Edit', edit_cic_path(@cic) %> 
+   <%= link_to 'Back', cics_path %>
+</div>
 
-<p>
-  <strong>Party:</strong>
-  <%= @cic.party %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @cic.image %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @cic.state %>
-</p>
-
-<p>
-  <strong>Term:</strong>
-  <%= @cic.term %>
-</p>
-
-<p>
-  <strong>Biography:</strong>
-  <%= @cic.biography %>
-</p>
-
-<%= link_to 'Edit', edit_cic_path(@cic) %> |
-<%= link_to 'Back', cics_path %>

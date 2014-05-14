@@ -13,14 +13,16 @@ President::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  
   root "navigation#intro"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/signup',    to: 'users#new',            via: 'get'
+  match '/signin',    to: 'sessions#new',         via: 'get'
+  match '/signout',   to: 'sessions#destroy',     via: 'delete'
+  match '/contactus', to: 'navigation#contact',   via: 'get'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

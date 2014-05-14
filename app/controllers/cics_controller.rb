@@ -1,15 +1,18 @@
 class CicsController < ApplicationController
   before_action :set_cic, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_entry
 
   # GET /cics
   # GET /cics.json
   def index
     @cics = Cic.all
+    @title = "Home"
   end
 
   # GET /cics/1
   # GET /cics/1.json
   def show
+    @cics = Cic.order(:presidency)
   end
 
   # GET /cics/new
@@ -70,5 +73,10 @@ class CicsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def cic_params
       params.require(:cic).permit(:presidency, :president, :took_office, :left_office, :party, :image, :state, :term, :biography)
+    end
+
+    def invalid_entry
+      logger.error "Attempt to access invalid record #{params[:id]}"
+      redirect_to cics_url, notice: 'Invalid record'
     end
 end

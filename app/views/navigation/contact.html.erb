@@ -1,1 +1,24 @@
-
+<div class = "contact_form">
+	<fieldset>
+		<legend>Please enter your details</legend>
+		 <div class = "field">
+           <%= f.label :name, "Name:", style: "width:150px;" %><br />
+           <%= f.text_field :name, size: 40 %>
+         </div>
+         <div class = "field">
+           <%= f.label :address, "Address:", style: "width:150px;" %><br />
+           <%= f.text_area :address, rows: 3, cols: 40 %>
+         </div>
+         <div class = "field">
+           <%= f.label :email, "Email:", style: "width:150px;" %><br />
+           <%= f.email_field :email, size: 40 %>
+         </div>
+         <div class = "field">
+           <%= f.label :message, "Message:", style: "width:250px;" %><br />
+           <%= f.text_area :message, rows: 10, cols: 40 %>
+         </div>
+         <div class = "actions">
+           <%= f.submit "Send", class: "button-style" %><br />
+         </div>
+    </fieldset>
+</div>

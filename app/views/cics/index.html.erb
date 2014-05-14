@@ -1,5 +1,4 @@
-<h1>List of Presidents</h1>
-
+<br /><br />
 <table>
   <% @cics.each do |cic| %>     
     <tr class = "<%= cycle('list_line_odd', 'list_line_even' ) %>">
@@ -9,6 +8,7 @@
        <td class = "president_description">
         <dl>
            <dt><%= cic.presidency %>
+            <br />
            <dd><%= truncate(strip_tags(cic.biography), length: 80) %></dd>
         <dl>
        </td>

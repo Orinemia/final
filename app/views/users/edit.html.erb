@@ -1,36 +1,35 @@
 <% provide(:title, "Edit user") %>
-<div>
-
-  <div>
-  <h1>Update your profile</h1>
-  </div>
-  <div>
-    <br/>
-    <%= form_for(@user) do |f| %>
+<div class = "signup"><h1>Update your profile</h1></div>
+<div class = "sign_up">
+  <fieldset>
+    <legend>Change relevant details</legend>
+    <br />
+      <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
-      <%= f.label :firstname, "First Name:" %>
+      <%= f.label :firstname, "First Name", style: "width:150px;" %>
       <%= f.text_field :firstname %>
       <br/>
-      <%= f.label :lastname, "Last name:" %>
+      <%= f.label :lastname, "Last name", style: "width:150px;" %>
       <%= f.text_field :lastname %>
       <br/>
-      <%= f.label :username, "Username:" %>
+      <%= f.label :username, "Username", style: "width:150px;" %>
       <%= f.text_field :username %>
       <br/>
-      <%= f.label :email, "Email:" %>
+      <%= f.label :email, "Email", style: "width:150px;" %>
       <%= f.text_field :email %>
       <br/>
-      <%= f.label :password, "Password:" %>
+      <%= f.label :password, "Password", style: "width:150px;" %>
       <%= f.password_field :password %>
       <br/>
-      <%= f.label :password_confirmation, "Confirm Password:" %>
+      <%= f.label :password_confirmation, "Confirm Password", style: "width:150px;" %>
       <%= f.password_field :password_confirmation %>
       <br/><br/>
       <%= f.submit "Save changes", class: "button-style" %><br/><br/>
     <% end %>
-
+    <div class = "adjust">
     <%= gravatar_for @user %>
     <a href="http://gravatar.com/emails">change image if you want</a>
-  </div>
+    </div>
+  </fieldset>
 </div>
