@@ -1,0 +1,286 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+/* line 16, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 22, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#banner {
+  background: #6D87D6;
+  padding: 10px;
+  border-bottom: 2px solid;
+  font: small-caps 40px/40px Helvetica, "Times New Roman", "sans-serif";
+  color: #081073;
+  text-align: center;
+}
+/* line 30, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#banner img {
+  width: 70px;
+  height: 50px;
+  float: left;
+}
+
+/* line 37, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#notice {
+  color: #081073;
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+
+/* line 46, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns {
+  background: #081073;
+}
+/* line 49, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns #main {
+  margin-left: 17em;
+  padding: 1em;
+  background: #7279db;
+}
+/* line 55, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns #side {
+  float: left;
+  padding: 1em 2em;
+  width: 13em;
+  background: #081073;
+  border: 1px;
+}
+/* line 62, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns #side ul {
+  padding: 2px;
+}
+/* line 64, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns #side ul li {
+  list-style: none;
+}
+/* line 66, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#columns #side ul li a {
+  color: #6D87D6;
+  font-size: medium;
+  text-decoration: none;
+}
+
+/* line 77, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.sign_up fieldset {
+  background: #eeffee;
+  width: 45em;
+}
+/* line 81, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.sign_up fieldset legend {
+  color: #6D87D6;
+  background: #081073;
+  font-family: helvetica;
+  padding: 0.2em 1em;
+}
+/* line 90, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.sign_up label {
+  width: 4em;
+  clear: left;
+  float: left;
+  text-align: right;
+  padding-top: 0.2em;
+  margin-top: 0.2em;
+  margin-right: 0.5em;
+  display: block;
+}
+/* line 101, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.sign_up input {
+  background-color: #CCCCFF;
+  float: left;
+}
+/* line 106, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.sign_up .button-style {
+  clear: both;
+  float: left;
+  width: 10em;
+  margin-top: 1em;
+  margin-left: 13em;
+  background-color: #CCCCFF;
+}
+
+/* line 116, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.signup h1 {
+  font: helvetica bold;
+  padding: 0.5em;
+  color: #081073;
+}
+
+/* line 122, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+.adjust {
+  font: helvetica bold small;
+  padding: 0.5em;
+  clear: both;
+  float: left;
+  color: #081073;
+}
+
+/* line 131, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#error {
+  color: white;
+}
+
+/* line 135, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/application.css.scss */
+#no {
+  text-decoration: no;
+  list-style-type: none;
+}
+/* line 6, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics table {
+  border-collapse: collapse;
+}
+/* line 10, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics table tr td {
+  padding: 5px;
+  vertical-align: top;
+}
+/* line 15, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .president_image {
+  width: 60px;
+  height: 70px;
+}
+/* line 20, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .president_description {
+  width: 60%;
+}
+/* line 24, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .president_description dl {
+  margin: 0;
+}
+/* line 28, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .president_description dt {
+  color: #081472;
+  font: bold larger 900;
+}
+/* line 34, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .president_description dd {
+  margin-top: 0.5em;
+  font-family: helvetica, sans-serif;
+  color: #000000;
+}
+/* line 41, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .list_actions {
+  font-size: x-small;
+  text-align: right;
+  padding-left: 1em;
+  background: 65A5D1;
+  color: #5fc0ce;
+}
+/* line 49, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .list_line_even {
+  background: #65A5D1;
+}
+/* line 53, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+.cics .list_line_odd {
+  background: #5fc0ce;
+}
+
+/* line 58, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+#overall {
+  background: #fff;
+  padding: 5px;
+}
+/* line 62, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+#overall img {
+  height: 40px;
+  width: 40px;
+}
+
+/* line 68, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/ci_cs.css.scss */
+#map-position {
+  width: 400px;
+  height: 400px;
+  float: right;
+}
+/* line 1, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  color: #333;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 8, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #494949;
+}
+
+/* line 15, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: gray;
+  /*background-color: #000;*/
+}
+
+/* line 33, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  color: red;
+}
+
+/* line 46, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 350px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 53, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 63, /media/sf_PROGRAMS/final/president/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
