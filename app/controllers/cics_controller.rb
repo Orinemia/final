@@ -2,11 +2,14 @@ class CicsController < ApplicationController
   before_action :set_cic, only: [:show, :edit, :update, :destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_entry
 
-  # GET /cics
-  # GET /cics.json
-  def list
+  
+  def index
     @cics = Cic.all
     @title = "Home"
+  end
+
+  def bio
+    @cic = Cic.find(params[:id])
   end
 
   # GET /cics/1

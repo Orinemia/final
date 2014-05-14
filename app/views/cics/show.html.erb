@@ -47,21 +47,23 @@ window.onload = function() {
   <div id="map-position"/></div>
   <div id = "stats">
       <strong>Took office:</strong>
-          <%= @cic.took_office %>
+          <%= @cic.took_office %><br />
       <strong>Left office:</strong>
-          <%= @cic.left_office %>
+          <%= @cic.left_office %><br />
       <strong>Political Party:<strong>
-          <%= @cic.party %>
+          <%= @cic.party %><br />
       <div id = "step">
        <strong>State of origin:</strong>
           <%= @cic.state %>
       </div>
       <strong>Number of Terms:</strong>
           <%= @cic.term %>
-  </div>
+     </div>
 </div>
-
+   
    <%= link_to 'Edit', edit_cic_path(@cic) %> 
    <%= link_to 'Back', cics_path %>
+
+
 
 

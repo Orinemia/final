@@ -1,4 +1,5 @@
 President::Application.routes.draw do
+  get "biography/bio"
   resources :sessions, only: [:new, :create, :destroy]
   get "navigation/home"
   get "navigation/about"
@@ -22,6 +23,8 @@ President::Application.routes.draw do
   match '/signin',    to: 'sessions#new',         via: 'get'
   match '/signout',   to: 'sessions#destroy',     via: 'delete'
   match '/contactus', to: 'navigation#contact',   via: 'get'
+  match '/home',      to: 'cic#index',            via: 'get'
+   
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

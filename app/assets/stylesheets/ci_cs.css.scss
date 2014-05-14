@@ -58,17 +58,27 @@
 #overall  {
      background: #fff;
      padding: 5px;
+     border: 10px solid #081472;
+     width: 960px;
+     margin-left: 40px;
 
      img  {
-        height: 40px;
-        width: 40px;
+        height: 400px;
+        width:  400px;
+        float: left;
+        margin-right: 150px;
      }
-}
+    
+     #map-position  {
+         width:  400px;
+         height: 400px;
+    }
 
-#map-position  {
-     width:  400px;
-     height: 400px;
-     float: right;
+    #stats  {
+        
+
+    }
+
 }
 
 
