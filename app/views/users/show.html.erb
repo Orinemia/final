@@ -8,17 +8,5 @@
 	    <h1> Welcome <%= @user.firstname.capitalize %>!</h1>
       </div>
   </div>
-
-  <div>
-      <% if signed_in? %>
-      	<br/>
-        <ul id = "no">
-          <li><%= button_to "Settings", edit_user_path(current_user) %></li>
-          <li><%= button_to "Sign out", signout_path, method: "delete" %></li>
-      <% else %>
-         <li><%= button_to "Sign in", signin_path %></li>
-        </ul>
-      <% end %>
-  </div>
 </div>
 

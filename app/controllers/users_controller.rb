@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :signed_in_user, only: [ :index, :edit, :update,]
+  before_action :correct_user,   only: [:edit, :update,]
 
   
   def index
@@ -41,15 +42,6 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # DELETE /users/1
@@ -73,5 +65,17 @@ private
     
     def user_params
       params.require(:user).permit(:firstname, :lastname, :username, :email, :password, :password_confirmation)
+    end
+    # Before filters
+    def signed_in_user
+      unless signed_in?
+        store_location
+         redirect_to signin_url,  notice: "Please Sign in."
+      end 
+    end
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_url) unless current_user?(@user)
     end
 end

@@ -16,9 +16,16 @@
 <div id = "columns">
    <div id = "side">
      <ul>
-       <li><a href="/">HOME</a></li>
-       <li><a href="/signin">LOGIN</a></li>
-       <li><a href="/contactus">CONTACT ME</a></li>
+       <li><%= link_to "Home", root_path %></li>
+       <% if signed_in? %>
+       <br />
+       <li><%= link_to "Profile", current_user %></li>
+       <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+       <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+       <% else %>
+       <br />
+       <li><%= link_to "Sign in", signin_path %></li>
+       <% end %>
      </ul>
    </div>
  <div id = "main"> 

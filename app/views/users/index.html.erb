@@ -1,34 +1,16 @@
-<h1>Listing users</h1>
-<br />
-<table>
-  <thead>
-    <tr>
-      <th>Firstname</th>
-      <th></th>
-      <th>Lastname</th>
-      <th></th>
-      <th>Username</th>
-      
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<% provide(:title, 'All users') %>
+<h1>All Users</h1>
 
+<ul class = "users">
+  <% @users.each do |user| %>
+   <% render user %>
+    
+  <% end %>
+</ul>
+<table>
   <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.firstname %></td>
-        <td></td>
-        <td><%= user.lastname %></td>
-        <td></td>
-        <td><%= user.username %></td>
-        
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+     <tr>
+     </tr>
   </tbody>
 </table>
 

@@ -1,4 +1,5 @@
 <br /><br />
+<div class = "vertical">
 <table>
   <% @cics.each do |cic| %>     
     <tr class = "<%= cycle('list_line_odd', 'list_line_even' ) %>">
@@ -15,12 +16,12 @@
 
         <td class = "list_actions">
            <%= link_to 'Show', cic %><br />
-           <%= link_to 'Edit', edit_cic_path(cic) %><br />
-           <%= link_to 'Destroy', cic, method: :delete, data: { confirm: 'Are you sure?' } %>
+           
         </td>
     </tr>
     <% end %>
 </table>
+</div>
 <br />
 
-<%= link_to 'New Cic', new_cic_path %>
+
