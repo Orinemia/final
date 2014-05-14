@@ -4,7 +4,7 @@ class CicsController < ApplicationController
 
   # GET /cics
   # GET /cics.json
-  def index
+  def list
     @cics = Cic.all
     @title = "Home"
   end
