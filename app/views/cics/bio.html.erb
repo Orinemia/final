@@ -1,4 +1,16 @@
-<div id = "overall">
-    <strong><blockquote>Biography</blockquote></strong>
-      <%= @cic.biography %>
+<div id = "overall1">
+   <%= image_tag(@cic.image) %> 
+   <h2>
+      <strong>Biography:</strong>
+   </h2>
+   <p>
+      <blockquote><%= @cic.biography %></blockquote>
+   </p>
 </div>
+<form action="/cics/<%= @cic.presidency %>">
+<input class = "button-style4" type = "submit" value = "Back to - <%= @cic.president %>">
+</form>
+<form action="/cics">
+<input class = "button-style3" type = "submit" value = "Back to Presidents">
+</form>
+

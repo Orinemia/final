@@ -18,19 +18,20 @@
  	
  }
 
+ body  {
+ 	width: 960px;
+ 	margin: auto;
+ 	background-image: url("FrontPage.png");
+}
+
 #banner {
 	background: #6D87D6;
 	padding: 10px;
 	border-bottom: 2px solid;
-	font: small-caps 40px/40px Helvetica, "Times New Roman", "sans-serif";
+	font: 2em Helvetica, "Times New Roman", sans-serif;
+	font-weight: bold;
 	color: #081073;
 	text-align: center;
-    
-    img {
-       width:  70px;
-       height: 50px;
-       float: left;
-    }
 }
 
 #notice {
@@ -44,12 +45,6 @@
 
 #columns {
 	background: #081073;
-
-	#main  {
-	   margin-left: 17em;
-	   padding: 1em;
-	   background: #7279db;
-	}
 
 	#side {
 	  float: left;
@@ -66,16 +61,27 @@
             color: #6D87D6;
             font-size: medium;
             text-decoration: none;
+
+           &:hover  {
+            color: #7109AA;
+            text-decoration: underline;
+           }
           }
         }
 	  }
+	}
+
+	#main  {
+	   margin-left: 17em;
+	   min-height: 960px;
+	   background: #7279db;
 	}
 }
 
 .sign_up  {
 	fieldset  {
 	  background: #eeffee;
-	  width: 45em;
+	  width: 35em;
 
 	  legend {
 	     color:      #6D87D6;
@@ -138,7 +144,8 @@
 }
 
 .vertical {
-	margin-left: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 

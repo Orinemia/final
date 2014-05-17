@@ -9,7 +9,8 @@ class CicsController < ApplicationController
   end
 
   def bio
-    @cic = Cic.find(params[:id])
+    @bio = true
+    @cic = Cic.find(params[:presidency])
   end
 
   # GET /cics/1

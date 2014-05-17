@@ -18,6 +18,7 @@ President::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+  get '/bio/:presidency' => 'cics#bio'
 
   match '/signup',    to: 'users#new',            via: 'get'
   match '/signin',    to: 'sessions#new',         via: 'get'

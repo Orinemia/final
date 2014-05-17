@@ -41,7 +41,7 @@
     .list_actions  {
       font-size:   x-small;
       text-align:  right;
-      padding-left: 1em;
+      padding-left: 0.1em;
       background: #65A5D1; 
           color: #5fc0ce;
     }    
@@ -59,27 +59,110 @@
      background: #fff;
      padding: 5px;
      border: 10px solid #081472;
-     width: 920px;
+     width: 550px;
+     height: 480px;
      margin-left: 40px;
 
      img  {
-        height: 400px;
-        width:  400px;
+        height: 250px;
+        width:  250px;
         float: left;
-        margin-right: 100px;
+        margin-right: 50px;
      }
     
      #map-position  {
-         width:  400px;
-         height: 400px;
+         width:  250px;
+         height: 250px;
     }
-
-    #stats  {
-        
-
-    }
-
 }
+
+#stats  {
+  width-right: 320px;
+  float: left;
+}
+
+#step1  {
+  margin-left: 360px;
+  margin-right: 10px;
+}
+
+#stats p  {
+  color: #081472;
+}
+
+#step1 p  {
+  color: #081472;
+}
+
+#step  {
+  color: #081472;
+}
+
+.button-style1  {
+  padding: 9px;
+  margin-left: 300px;
+  margin-top: 15px;
+  background: #081472;
+  color: #6D87D6;
+}
+
+#overall1  {
+     background: #fff;
+     padding: 5px;
+     border: 10px solid #081472;
+     width: 550px;
+     height: 650px;
+     margin-left: 40px;
+     
+
+     img  {
+        height: 250px;
+        width:  250px;
+        float: left;
+        margin-right: 50px;
+     }
+}
+
+.button-style3  {
+  padding: 9px;
+  margin-left: 250px;
+  margin-top: 15px;
+  background: #081472;
+  color: #6D87D6;
+}
+
+#overall1 h2  {
+  padding: 10px;
+  text-align: center;
+}
+
+.button-style2  {
+  padding: 9px;
+  margin-left: 205px;
+  margin-top: 15px;
+  background: #081472;
+  color: #6D87D6;
+}
+
+.button-style4  {
+  padding: 9px;
+  margin-left: 230px;
+  margin-top: 15px;
+  background: #081472;
+  color: #6D87D6;
+}
+
+.button-style5  {
+  padding: 1px;
+  margin-left: 5px;
+  margin-top: 20px;
+  background: #081472;
+  color: #6D87D6;
+  width: 50px;
+}
+
+
+
 
 
 

@@ -8,15 +8,17 @@
        </td>
        <td class = "president_description">
         <dl>
-           <dt><%= cic.presidency %>
-            <br />
+           <dt><%= cic.presidency %></dt
+>            <br />
            <dd><%= truncate(strip_tags(cic.biography), length: 80) %></dd>
-        <dl>
+        </dl>
        </td>
-
-        <td class = "list_actions">
+          
+       <td class = "list_actions">
+           <form action="/cics/<%= cic.presidency %>">
+             <input class = "button-style5" type = "submit" value = "Show">
+           </form>
            <%= link_to 'Show', cic %><br />
-           
         </td>
     </tr>
     <% end %>
