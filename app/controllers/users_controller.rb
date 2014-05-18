@@ -66,6 +66,7 @@ private
     def user_params
       params.require(:user).permit(:firstname, :lastname, :username, :email, :password, :password_confirmation)
     end
+    
     # Before filters
     def signed_in_user
       unless signed_in?
