@@ -1,12 +1,12 @@
 President::Application.routes.draw do
-  get "biography/bio"
-  resources :sessions, only: [:new, :create, :destroy]
+ resources :sessions, only: [:new, :create, :destroy]
   get "navigation/home"
   get "navigation/about"
   get "navigation/contact"
   resources :users
 
   resources :cics
+  #get "biography/bio"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -25,7 +25,7 @@ President::Application.routes.draw do
   match '/signin',    to: 'sessions#new',         via: 'get'
   match '/signout',   to: 'sessions#destroy',     via: 'delete'
   match '/contactus', to: 'navigation#contact',   via: 'get'
-  match '/home',      to: 'cics#index',            via: 'get'
+  match '/home',      to: 'cics#index',           via: 'get'
    
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
