@@ -40,7 +40,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.2'
+gem 'bcrypt-ruby', '~> 3.1.2'
 
 group :development, :test, :production do
    gem 'rspec-rails', '~> 2.13.1'
