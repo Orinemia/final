@@ -6,7 +6,7 @@ President::Application.routes.draw do
   match '/signin',    to: 'sessions#new'
   match '/signout',   to: 'sessions#destroy',     via: 'delete'
 
-  match '/signup',    to: 'users#new',
+  match '/signup',    to: 'users#new'
   match '/contactus', to: 'navigation#contact'      
   match '/bio/:id',   to: 'cics#bio'
   match '/home',      to: 'cics#index'
