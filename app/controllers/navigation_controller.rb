@@ -1,6 +1,7 @@
 class NavigationController < ApplicationController
   def home
-  	@title = "Home"
+  	@title = "Intro"
+    #redirect_to signin_path #Redirects to /signin page
   end
 
   def about

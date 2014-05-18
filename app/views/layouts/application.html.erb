@@ -10,11 +10,12 @@
 
 <body class ='<%= controller.controller_name %>'>
   <div id = "banner">
-    <%= @page_title || "THE PRESIDENTS" %>
+    <%= @page_title || "MEET THE PRESIDENTS" %>
   </div>
+
 <div id = "columns">
-   <div id = "side">
-     <ul>
+  <div id ="side">
+    <ul>
        <li><%= link_to "Intro", root_path %></li>
        <br />
        <li><%= link_to "Sign up", signup_path %></li>
@@ -29,15 +30,17 @@
        <li><%= link_to "Sign in", signin_path %></li>
        <% end %>
      </ul>
-   </div>
- <div id = "main"> 
-  <%= yield %>
- </div>
-  <div id = "error">
+     <br />
+     <div id = "error">
     <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
     <% end %>
   </div>
+ </div>
+ <div id = "main"> 
+  <%= yield %>
+ </div>
+  
 </div>
 </body>
 </html>

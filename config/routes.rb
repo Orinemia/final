@@ -18,13 +18,14 @@ President::Application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get '/bio/:presidency' => 'cics#bio'
+  get '/bio/:id' => 'cics#bio'
+  
 
   match '/signup',    to: 'users#new',            via: 'get'
   match '/signin',    to: 'sessions#new',         via: 'get'
   match '/signout',   to: 'sessions#destroy',     via: 'delete'
   match '/contactus', to: 'navigation#contact',   via: 'get'
-  match '/home',      to: 'cic#index',            via: 'get'
+  match '/home',      to: 'cics#index',            via: 'get'
    
 
   # Example of named route that can be invoked with purchase_url(id: product.id)

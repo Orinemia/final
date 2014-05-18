@@ -1,9 +1,9 @@
 <% provide(:title, "Sign in") %>
-<div class = "signup"><h1>Sign in</h1></div>
+<div class = "signup"><h1>Please sign the register...Thank you.</h1></div>
 <div class = "sign_up"> 
   <fieldset>
     <legend>Please enter your details</legend> 
-         <p><%= @error %></p>
+    <p><%= @error %></p>
          <%= form_for(:session, url: sessions_path) do |f| %>
            <br />
            <%= f.label :email, "Email ", style: "width:150px;" %>
@@ -15,6 +15,6 @@
            <%= f.submit "Sign in", class: "button-style" %>
           <% end %>
           <br />
-          <p class = "adjust">New user? <%= link_to "Sign up now!", signup_path %></p>
+          <p class = "adjust">Visiting for the first time? <%= link_to "Please register your details for security.", signup_path %></p>
   </fieldset>
 </div>

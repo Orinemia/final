@@ -1,4 +1,6 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="refresh" content="5" />
+
 <script type="text/javascript"
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvxrtNIzHIO-kUxuK82OFKETpX9gBqkTg&sensor=false">
 </script>
@@ -44,8 +46,7 @@ window.onload = function() {
   <div id = "show">
     <%= image_tag(@cic.image) %> 
   </div>
-  <div id="map-position"/></div>
-  <br />
+  <div id="map-position"></div>
   <div id = "stats">
       <p><strong>Took office:</strong><%= @cic.took_office %></p><br />
       <p><strong>Left office:</strong><%= @cic.left_office %></p><br />
@@ -56,7 +57,7 @@ window.onload = function() {
     <p><strong>State of origin:</strong><div id = "step"><%= @cic.state %></div></p>
   </div>
 </div>
-<form action="/bio/<%= @cic.presidency %>">
+<form action="/bio/<%= @cic.id %>">
 <input class="button-style2" type="submit" value="<%= @cic.president %>'s brief biography">
 </form>
 <form action="/cics">

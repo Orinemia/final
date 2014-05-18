@@ -7,10 +7,10 @@
       <blockquote><%= @cic.biography %></blockquote>
    </p>
 </div>
-<form action="/cics/<%= @cic.presidency %>">
-<input class = "button-style4" type = "submit" value = "Back to - <%= @cic.president %>">
+<form action="/cics/<%= @cic.id %>">
+  <input class = "button-style4" type = "submit" value = "Back to - <%= @cic.president %>">
 </form>
 <form action="/cics">
-<input class = "button-style3" type = "submit" value = "Back to Presidents">
+  <input class = "button-style3" type = "submit" value = "Back to Presidents">
 </form>
 

@@ -9,14 +9,15 @@ class CicsController < ApplicationController
   end
 
   def bio
-    @bio = true
-    @cic = Cic.find(params[:presidency])
+    #@bio = true
+    @cic = Cic.find(params[:id])
   end
 
   # GET /cics/1
   # GET /cics/1.json
   def show
     @cics = Cic.order(:presidency)
+    #cic = Cic.find(:presidency)
   end
 
   # GET /cics/new

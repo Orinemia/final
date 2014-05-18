@@ -18,7 +18,7 @@
    }
    
    .president_description {
-      width: 60%;
+      width: 80%;
 
 
       dl {
@@ -39,11 +39,11 @@
     }
 
     .list_actions  {
-      font-size:   x-small;
+      font-size:   small;
       text-align:  right;
       padding-left: 0.1em;
       background: #65A5D1; 
-          color: #5fc0ce;
+          color: #081472;
     }    
 
     .list_line_even {
@@ -61,7 +61,7 @@
      border: 10px solid #081472;
      width: 550px;
      height: 480px;
-     margin-left: 40px;
+     margin-left: 70px;
 
      img  {
         height: 250px;
@@ -86,17 +86,6 @@
   margin-right: 10px;
 }
 
-#stats p  {
-  color: #081472;
-}
-
-#step1 p  {
-  color: #081472;
-}
-
-#step  {
-  color: #081472;
-}
 
 .button-style1  {
   padding: 9px;
@@ -138,7 +127,7 @@
 
 .button-style2  {
   padding: 9px;
-  margin-left: 205px;
+  margin-left: 225px;
   margin-top: 15px;
   background: #081472;
   color: #6D87D6;
