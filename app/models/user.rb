@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base     # To be able to compare email addresses and check user info provided by users. Orinemia Ajulo
-	before_save { self.email = email.downcase }
+	before_save { user.email = email.downcase! }
 	before_create :create_remember_token
 	#length, presence and format validation for user details
 	validates :firstname, :lastname, :username, presence: true, length: { maximum: 15 }
