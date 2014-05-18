@@ -20,16 +20,14 @@
        <br />
        <li><%= link_to "Sign up", signup_path %></li>
        <% if signed_in? %>
-       <br />
-       <li><%= link_to "Home", home_path %></li>
-       <li><%= link_to "Profile", current_user %></li>
-       <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-       <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+         <br />
+         <li><%= link_to "Home", home_path %></li>
+         <li><%= link_to "Profile", current_user %></li>
+         <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+         <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
        <% else %>
-       <br />
-            <form action="/sessions/new">
-            <input class = "button-style4" type = "submit" value = "Sign In">
-            </form>
+         <br />
+            
        <% end %>
      </ul>
      <br />
