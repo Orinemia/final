@@ -3,13 +3,13 @@ President::Application.routes.draw do
   resources :cics
   resources :sessions, only: [:new, :create, :destroy]
  
-  match '/signin',    to: 'sessions#new'
-  match '/signout',   to: 'sessions#destroy',     via: 'delete'
+  match '/signin',    to: 'sessions#new',          via: 'get'
+  match '/signout',   to: 'sessions#destroy',      via: 'delete'
 
-  match '/signup',    to: 'users#new'
-  match '/contactus', to: 'navigation#contact'      
-  match '/bio/:id',   to: 'cics#bio'
-  match '/home',      to: 'cics#index'
+  match '/signup',    to: 'users#new',             via: 'get'
+  match '/contactus', to: 'navigation#contact',    via: 'get'   
+  match '/bio/:id',   to: 'cics#bio',              via: 'get'
+  match '/home',      to: 'cics#index',            via: 'get'
   root :to => "navigation#intro"
 
   # The priority is based upon order of creation: first created -> highest priority.
