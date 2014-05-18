@@ -1,31 +1,34 @@
 President::Application.routes.draw do
- resources :sessions, only: [:new, :create, :destroy]
-  get "navigation/home"
-  get "navigation/about"
-  get "navigation/contact"
   resources :users
-
   resources :cics
-  #get "biography/bio"
+  resources :sessions, only: [:new, :create, :destroy]
+ 
+  match '/signin',    to: 'sessions#new'
+  match '/signout',   to: 'sessions#destroy',     via: 'delete'
 
+  match '/signup',    to: 'users#new',
+  match '/contactus', to: 'navigation#contact'      
+  match '/bio/:id',   to: 'cics#bio'
+  match '/home',      to: 'cics#index'
+  root :to => "navigation#intro"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   
-  root "navigation#intro"
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get '/bio/:id' => 'cics#bio'
+  
   
 
-  match '/signup',    to: 'users#new',            via: 'get'
-  match '/signin',    to: 'sessions#new',         via: 'get'
-  match '/signout',   to: 'sessions#destroy',     via: 'delete'
-  match '/contactus', to: 'navigation#contact',   via: 'get'
-  match '/home',      to: 'cics#index',           via: 'get'
+  
+  
+  
+
+  
    
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
