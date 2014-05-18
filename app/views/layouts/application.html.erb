@@ -27,10 +27,8 @@
          <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
        <% else %>
          <br />
-            <form action="/sessions/new">
-            <input class = "button-style4" type = "submit" value = "Sign In">
-            </form>
-        <% end %>
+         <li><%= link_to "Sign in", new_session_path %>
+       <% end %>
      </ul>
      <br />
      <div id = "error">
