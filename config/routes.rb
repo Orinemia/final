@@ -1,12 +1,12 @@
 President::Application.routes.draw do
-  resources :users
+  resources :believers
   resources :cics
   resources :sessions, only: [:new, :create, :destroy]
  
   #match '/signin',    to: 'sessions#new',          via: 'get'
   #match '/signout',   to: 'sessions#destroy',      via: 'delete'
 
-  match '/signup',    to: 'users#new',             via: 'get'
+  match '/signup',    to: 'believers#new',         via: 'get'
   match '/contactus', to: 'navigation#contact',    via: 'get'   
   match '/bio/:id',   to: 'cics#bio',              via: 'get'
   match '/home',      to: 'cics#index',            via: 'get'

@@ -58,6 +58,8 @@ end
 # Have to use capybara 1.1.2 to ensure that invisible text like my tiels are not ignored in the test
  gem 'capybara', '1.1.2'
 
+ gem 'protected_attributes'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

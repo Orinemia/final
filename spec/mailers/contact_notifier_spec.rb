@@ -11,7 +11,7 @@ describe ContactNotifier do
     end
 
     it "renders the body" do
-      mail.body.encoded.should match("Hi")
+      mail.body.encoded.should match("Greetings")
     end
   end
 

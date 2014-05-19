@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140514133230) do
+ActiveRecord::Schema.define(version: 20140519093753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "believers", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+  end
+
+  add_index "believers", ["email"], name: "index_believers_on_email", unique: true, using: :btree
 
   create_table "cics", force: true do |t|
     t.string   "presidency"
@@ -34,13 +44,12 @@ ActiveRecord::Schema.define(version: 20140514133230) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "username"
-    t.string   "password"
-    t.string   "confirm_password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",            default: false
+    t.boolean  "admin",           default: false
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token", using: :btree
