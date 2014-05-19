@@ -12,6 +12,7 @@ class BelieversController < ApplicationController
   def create
   	@believer = Believer.new(params[:believer])
   	if @believer.save
+      sign_in @believer
   		flash[:success] = "Meet the visionaries all in one place"
   		redirect_to @believer
   		ContactNotifier.message_email(@believer).deliver

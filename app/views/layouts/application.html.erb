@@ -15,19 +15,23 @@
 
 <div id = "columns">
   <div id ="side">
-    <ul>
-       <li><%= link_to "Intro", root_path %></li>
-       <br />
-       <li><%= link_to "Sign up" %></li>
-  
+      <ul>
          <br />
+         <% if signed_in? %>
          <li><%= link_to "Home", home_path %></li>
-         <li><%= link_to "Profile" %></li>
-         <li><%= link_to "Settings"%></li>
-         <li><%= link_to "Sign out" %>
          <br />
-         <li><%= link_to "Sign in" %></li>
-     </ul>
+         <li><%= link_to "Profile", current_believer %></li>
+         <br />
+         <li><%= link_to "Settings"%></li>
+         <br />
+         <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+         <% else %>
+          <li><%= link_to "Intro", root_path %></li>
+          <br />
+          <li><%= link_to "Sign in", signin_path %></li>
+         <% end %>
+         <br />
+      </ul>
      <br />
      <div id = "error">
         <% flash.each do |key, value| %>
