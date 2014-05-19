@@ -1,3 +1,20 @@
-<h1> Welcome <%= @believer.firstname.capitalize %>!</h1>
-<h2>You are <%= @believer.email %></h2>
-<h3>The title is <%= @title %>
+<table class = "login">
+	<tr>
+		<td>
+           <h1>
+	           <%= gravatar_for @believer %>
+	            Welcome <%= @believer.firstname.capitalize %>!
+           </h1>
+        </td>
+    </tr>
+    <tr>
+        <td class = "loginusers">
+        	<strong>Name:</strong>  <%= @believer.firstname %><br />
+        	<strong>Details</strong><%= link_to believer_path(@believer), @believer %>
+        </td>
+    </tr>
+</table>
+<p>
+	Please take a moment to look around this place.
+	Thank you
+</p>

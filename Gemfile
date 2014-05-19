@@ -48,7 +48,6 @@ group :development, :test, :production do
    gem 'guard-rspec'
    gem 'guard-spork'
    gem 'spork-rails'
-   gem 'factory_girl_rails', '4.2.1'
 end
 
 group :production , :development, :test do
@@ -59,6 +58,11 @@ end
  gem 'capybara', '1.1.2'
 
  gem 'protected_attributes'
+
+group :test do
+	gem 'factory_girl_rails', '4.2.1'
+end
+
 
 # Use unicorn as the app server
 # gem 'unicorn'

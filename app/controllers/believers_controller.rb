@@ -5,5 +5,6 @@ class BelieversController < ApplicationController
 
   def show
   	@believer = Believer.find(params[:id])
+  	@title = @believer.firstname
   end
 end
