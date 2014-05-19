@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Presidents | <%=@title %></title>
+ <title>Presidents | <%=@title %></title>
   
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+  <script>
+  function loadsearch()
+  {
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+    {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+    }
+  else
+    {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  xmlhttp.onreadystatechange=function()
+    {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+      {
+      document.getElementById('searchresult').style.display = "block";
+      document.getElementById("searchresult").innerHTML=xmlhttp.responseText;
+      }
+    if (str == "")
+    {
+      document.getElementById('searchresult').style.display = "none";
+    }
+    }
+    
+  var str = document.getElementById("searchbox").value;
+  xmlhttp.open("GET","../search.html?query="+str,true);
+  xmlhttp.send();
+
+  }
+  </script>
+
 </head>
 
 <body class ='<%= controller.controller_name %>'>
@@ -22,7 +54,7 @@
          <br />
          <li><%= link_to "Profile", current_believer %></li>
          <br />
-         <li><%= link_to "Settings"%></li>
+         <li><%= link_to "Settings", edit_believer_path(current_believer) %></li>
          <br />
          <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
          <% else %>

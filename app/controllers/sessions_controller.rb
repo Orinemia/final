@@ -11,8 +11,8 @@ class SessionsController < ApplicationController
   	    @title = "Sign in"
   	    render 'new'
   	else
-  		 sign_in the believer
-       redirect_to believer
+  		 sign_in believer
+       redirect_back_or believer
   	end
   end
 

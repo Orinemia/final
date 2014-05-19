@@ -1,0 +1,10 @@
+<h1>All Users</h1>
+<ul class = "users">
+     <li>
+       <%= if current_user.admin? %>
+        <%=link_to "Delete", believer, method => :delete, :confirm => "Are you sure?", :title => "Delete#{believer.firstname}" %>
+        <%= gravatar_for believer, :size => 50 %>
+        <%= link_to believer.firstname, believer %><%= believer.lastname %>
+       <% end %>
+    </li>
+ </ul>

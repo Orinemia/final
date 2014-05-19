@@ -12,7 +12,6 @@ class Believer < ActiveRecord::Base
               :presence => true,
 	          :length => { :maximum => 25 }
 
-
     validates :email,     :presence => true,
 	          :format => { :with => email_regex },
 	          :uniqueness => { :case_sensitive => false }

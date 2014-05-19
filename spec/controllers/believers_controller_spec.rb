@@ -20,9 +20,7 @@ describe BelieversController do
              assigns(:user).should == @believer
          end
     	     
-     
-
-         it "should have the right title" do
+        it "should have the right title" do
              get :show,  :id => @believer
              response.should have_selector("title", :content => @believer.firstname )
          end

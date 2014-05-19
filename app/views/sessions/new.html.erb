@@ -4,8 +4,8 @@
   <fieldset>
     <legend>Please enter your details</legend> 
     <p><%= @error %></p>
-         <%= form_for(:session, url: sessions_path) do |f| %>
-           <br />
+         <%= form_for(:session, url: sessions_path) do |f| %> 
+          <br />
            <%= f.label :email, "Email ", style: "width:150px;" %>
            <%= f.text_field :email %>
            <br />
