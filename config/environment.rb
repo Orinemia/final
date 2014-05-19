@@ -5,7 +5,7 @@ require File.expand_path('../application', __FILE__)
 President::Application.initialize!
 President::Application.configure do
 
-config.action_mailer.delivery_method = :smtp
+config.action_mailer.delivery_method = :sendmail
 
 config.action_mailer.smtp_settings = {
    address:             "smtp.gmail.com",
