@@ -1,0 +1,13 @@
+<% if @believer.errors.any? %>
+  <div id="error_explanation">
+    <div class="alert alert_error">
+     The form contains <%= pluralize(@believer.errors.count, "error") %>
+     and prevented this user from generating code.
+    </div>
+    <ul>
+    <% @believer.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+    <% end %>
+    </ul>
+   </div>
+<% end %>

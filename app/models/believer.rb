@@ -1,6 +1,6 @@
 class Believer < ActiveRecord::Base
-	attr_accessor  :password
-	attr_accessible :firstname, :lastname, :email, :password, :password_confirmation, :password_confirmation
+	attr_accessor  :password, :password_confirmation
+	attr_accessible :firstname, :lastname, :email, :password, :password_confirmation
 
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -23,6 +23,7 @@ class Believer < ActiveRecord::Base
 	                      :confirmation => true,
 	                      :length   => { :within => 6..20 } 
 
+	
 	before_save :encrypt_password
 
 	def has_password?(submitted_password)

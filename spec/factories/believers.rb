@@ -1,10 +1,11 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
-FactoryGirl.define do |believer|
-    
-    believer.firstname                "Orinemia"
-    believer.lastname                 "Ajulo"
-    believer.email                    "orinemia@awesome.com"
-    believer.password                 "scatterarea"
-    believer.password_confirmation    "scatterarea"
+FactoryGirl.define do 
+	factory :believer do
+        firstname                "Orinemia"
+        lastname                 "Ajulo"
+        email                    "orinemia@awesome.com"
+        password                 "scatterarea"
+        password_confirmation    "scatterarea"
+   end
 end

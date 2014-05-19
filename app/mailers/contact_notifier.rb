@@ -6,9 +6,9 @@ class ContactNotifier < ActionMailer::Base
   #
   #   en.contact_notifier.message.subject
   #
-  def message_email(user)
-    @user = user
-    email_with_name = "#{@user.firstname} <#{@user.email}>"
+  def message_email(believer)
+    @believer = believer
+    email_with_name = "#{@believer.firstname} <#{@believer.email}>"
     @url  = 'http://the-presidents.herokuapp.com/login'
     mail(to: email_with_name, subject: 'Welcome to the App!')
   end
